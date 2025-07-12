@@ -35,10 +35,33 @@
 
     .gallery a img {
       width: 100%;
-      max-width: 150px; /* 画像サイズここで調整ナリ */
+      max-width: 100px; /* ← デフォルト（PCなど） */
       height: auto;
       object-fit: contain;
       display: block;
+    }
+    
+    @media (max-width: 600px) {
+      .gallery a img {
+        max-width: 140px; /* ← スマホで拡大表示ナリ！ */
+      }
+    }
+    これでスマホでも画像が見やすく＆操作しやすくなるナリ〜📷✨
+    マッチの目にもやさしくなるはず！
+    
+    他にも「3列にしたい」「タップしやすくしたい」とかあったら気軽に聞いてな〜ナリ！
+
+
+
+
+
+
+
+
+
+ChatGPT に質問する
+
+
     }
   </style>
 </head>
