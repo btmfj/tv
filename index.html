@@ -2,18 +2,23 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=600, initial-scale=1.0"> <!-- ★ここが重要ナリ -->
   <title>画像リンクギャラリー</title>
   <style>
     body {
       font-family: sans-serif;
       background-color: #f5f5f5;
       padding: 30px;
+      margin: 0;
+    }
+
+    .wrapper {
+      min-width: 600px; /* ← ★スマホでもこの幅以上にするナリ */
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ← 自動で列数調整ナリ！ */
+      grid-template-columns: repeat(4, 1fr); /* 常に4列ナリ！ */
       gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
@@ -24,7 +29,7 @@
       justify-content: center;
       align-items: center;
       background-color: white;
-      padding: 30px; /* ← 上下左右すべてに余白ナリ！ */
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.2s ease;
@@ -36,7 +41,7 @@
 
     .gallery a img {
       width: 100%;
-      max-width: 200px;
+      max-width: 120px;
       height: auto;
       object-fit: contain;
       border-radius: 4px;
@@ -45,26 +50,19 @@
   </style>
 </head>
 <body>
-  <h1 style="text-align:center;">画像リンクギャラリー</h1>
 
-  <div class="gallery">
-    <!-- ここから画像リンクを追加していってね -->
-    <a href="http://vthanh.utako.moe/NHK_G/index.m3u8" target="_blank">
-      <img src="nhkg.PNG" alt="NHK_G">
-    </a>
-    <a href="http://vthanh.utako.moe/NHK_E/index.m3u8" target="_blank">
-      <img src="nhke.PNG" alt="NHK_G7">
-    </a>
-    <a href="http://vthanh.utako.moe/Fuji_TV/index.m3u8" target="_blank">
-      <img src="フジテレビ.PNG" alt="フジテレビ">
-    </a>
-    <a href="https://example.com/4" target="_blank">
-      <img src="img4.jpg" alt="画像4">
-    </a>
-    <a href="https://example.com/5" target="_blank">
-      <img src="img5.jpg" alt="画像5">
-    </a>
-    <!-- 必要に応じて img6〜img20 もどんどん追加してナリ -->
+  <div class="wrapper">
+    <h1 style="text-align:center;">画像リンクギャラリー</h1>
+
+    <div class="gallery">
+      <a href="http://vthanh.utako.moe/NHK_G/index.m3u8"><img src="nhkg.PNG" alt="NHK_G"></a>
+      <a href="http://vthanh.utako.moe/NHK_E/index.m3u8"><img src="nhke.PNG" alt="NHK_E"></a>
+      <a href="http://vthanh.utako.moe/Fuji_TV/index.m3u8"><img src="フジテレビ.PNG" alt="フジテレビ"></a>
+      <a href="#"><img src="img4.jpg" alt="画像4"></a>
+      <a href="#"><img src="img5.jpg" alt="画像5"></a>
+      <a href="#"><img src="img6.jpg" alt="画像6"></a>
+      <!-- 必要に応じて20個まで追加OKナリ -->
+    </div>
   </div>
 
 </body>
