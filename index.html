@@ -32,7 +32,7 @@
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* ← 常に4列 */
     gap: 16px;
   }
 
@@ -56,22 +56,15 @@
 
   .gallery a img {
     width: 100%;
-    max-width: 100px;
+    max-width: 100px; /* スマホでもPCでもこのサイズ */
     height: auto;
     object-fit: contain;
     display: block;
   }
 
-  @media (max-width: 600px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery a img {
-      max-width: 100%;
-    }
-  }
+  /* ★ メディアクエリ削除！スマホでも4列固定ナリ！ */
 </style>
+
 </head>
 <body>
   <div class="wrapper">
