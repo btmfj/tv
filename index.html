@@ -4,77 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ★ここが重要ナリ！ -->
   <title>テレビチャンネル</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f5f5f5;
-      padding: 10px;
-      margin: 0;
-    }
+<style>
+  body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 0;
+  }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 常に4列ナリ */
-      gap: 16px;
-    }
-
-    .gallery a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-      padding: 5px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: all 0.3s ease; /* ← ここ重要ナリ！ */
-    }
-    
-    .gallery a:hover {
-      transform: scale(1.08);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
-      filter: brightness(1.2);
-      background-color: #fdfdfd;
-    }
-
-    .gallery a img {
-      width: 100%;
-      max-width: 100px; /* ← デフォルト（PCなど） */
-      height: auto;
-      object-fit: contain;
-      display: block;
-    }
-    
-    @media (max-width: 600px) {
-      .gallery a img {
-        width: 100%;
-        max-width: 500px; /* ← スマホで拡大表示ナリ！ */
-        height: auto;
-        object-fit: contain;
-        display: block;
-    }
-    .subtitle {
-      display: block;
-      background-color: black;        /* 黒帯背景 */
-      color: white;                   /* 白字タイトル */
-      text-align: center;             /* 中央寄せ */
-      font-size: 20px;                /* サイズお好みで調整 */
-      padding: 10px 0;                /* 上下余白（帯の太さ） */
-      margin: 20px 0;                 /* 周囲のスペース */
-      width: 100%;                    /* 横幅いっぱい */
-      box-sizing: border-box;         /* はみ出し防止ナリ */
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
-    .wrapper {
+  .wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    5}
+  }
 
-  </style>
+  .subtitle {
+    display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .gallery a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .gallery a:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+    background-color: #fdfdfd;
+  }
+
+  .gallery a img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery a img {
+      max-width: 100%;
+    }
+  }
+</style>
 </head>
 <body>
   <div class="wrapper">
