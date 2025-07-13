@@ -52,12 +52,23 @@
         object-fit: contain;
         display: block;
     }
+      .subtitle {
+      background-color: black;        /* 黒帯背景 */
+      color: white;                   /* 白字タイトル */
+      text-align: center;             /* 中央寄せ */
+      font-size: 20px;                /* サイズお好みで調整 */
+      padding: 10px 0;                /* 上下余白（帯の太さ） */
+      margin: 20px 0;                 /* 周囲のスペース */
+      width: 100%;                    /* 横幅いっぱい */
+      box-sizing: border-box;         /* はみ出し防止ナリ */
+    }
+
   </style>
 </head>
 <body>
 
   <h1 style="text-align:center;">テレビチャンネル</h1>
-  <h1 style="text-align:center; font-size: 20px;">地上波</h1>
+  <h1 class="subtitle">地上波</h1>
   <div class="gallery">
     <a href="http://vthanh.utako.moe/NHK_G/index.m3u8"><img src="nhkg.PNG" alt="NHK_G"></a>
     <a href="http://vthanh.utako.moe/NHK_E/index.m3u8"><img src="nhke.PNG" alt="NHK_E"></a>
@@ -69,7 +80,7 @@
     <a href="https://hamada.gaki-no-tsukai.stream/hls/test.m3u8"><img src="ダウンタウン.JPG" alt="ダウンタウン"></a>
 
   </div>
-  <h1 style="text-align:center; font-size: 20px;">BS</h1>
+  <h1 class="subtitle">BS</h1>
   <div class="gallery">
     <a href="http://vthanh.utako.moe/bsp4k/index.m3u8"><img src="NHKBS.PNG" alt="NHK_BS"></a>
     <a href="http://vthanh.utako.moe/bsntv/index.m3u8"><img src="BS日テレ.PNG" alt="BS日テレ"></a>
@@ -85,7 +96,7 @@
     <a href="http://vthanh.utako.moe/wcinema/index.m3u8"><img src="WOWOWシネマ.PNG" alt="WOWOWシネマ"></a>
     <a href="http://vthanh.utako.moe/Animax/index.m3u8"><img src="アニマックス.PNG" alt="アニマックス"></a>
   </div> 
-  <h1 style="text-align:center; font-size: 20px;">CS</h1>
+  <h1 class="subtitle">CS</h1>
   <div class="gallery">
     <a href="https://stream02.willfonk.com/live_playlist.m3u8?cid=BS241&r=FHD&ccode=JP&m=d0:20:20:04:35:cc&t=0d6938cb3dcf4b79848bc1753a59daf1"><img src="Mnet.PNG" alt="Mnet"></a>    
     <a href="http://vthanh.utako.moe/AT-X/index.m3u8"><img src="AT-X.PNG" alt="AT-X"></a>
